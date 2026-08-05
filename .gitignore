@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Java
+*.class
+target/
+*.jar
+
+# Node
+node_modules/
+npm-debug.log
+
+# Database files (don't commit local test DBs)
+*.sqlite3
+*.db
+*.db-journal
+
+# Build output
+build/
+dist/
+out/
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
