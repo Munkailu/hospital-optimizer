@@ -7,11 +7,11 @@ Team of 15, split into 5 pods of 3. Built over 7 days.
 
 | Pod | Members | Owns |
 |-----|---------|------|
-| **Pod 1** | Ninson Abigail (L300), Akuffo Samuel (L200), Dogbe Nicole Eyram (L200) | Queues, Priority & Smart Assignment |
-| **Pod 2** | Lucius Jackson (L300), Bartah Mohammed Arimeyaw (L200), Atta-Penkrah Nana Abena Boah (L200) | Trees, Fast Lookup & Planning Ahead |
-| **Pod 3** | Munkailu Yakubu (L300), Okyere Oscar Oroe (L200), Lamptey Glykeria Odarkor (L200) | Data, Database & Delivery |
-| **Pod 4** | Irene Adu (L300), Ayeh-Kumi Ferdinand Koram (L200), Awortwe Benedict Kofi (L200) | Hashing, Grouping & Maps |
-| **Pod 5** | Yeboah Owusu Blessings (L300), Alidu Radiyatu (L300), Ibrahim Hidayat (L200) | Lists & Search/Sort |
+| **Pod 1** | Ninson Abigail (L300), Akuffo Samuel (L200), Dogbe Nicole Eyram (L200) | Data, Database & Delivery |
+| **Pod 2** | Lucius Jackson (L300), Bartah Mohammed Arimeyaw (L200), Atta-Penkrah Nana Abena Boah (L200) | Lists & Search/Sort |
+| **Pod 3** | Munkailu Yakubu (L300), Okyere Oscar Oroe (L200), Lamptey Glykeria Odarkor (L200) | Queues, Priority & Smart Assignment |
+| **Pod 4** | Irene Adu (L300), Ayeh-Kumi Ferdinand Koram (L200), Awortwe Benedict Kofi (L200) | Trees, Fast Lookup & Planning Ahead |
+| **Pod 5** | Yeboah Owusu Blessings (L300), Alidu Radiyatu (L300), Ibrahim Hidayat (L200) | Hashing, Grouping & Maps |
 
 Full per-person task breakdown: see `docs/pod_assignments.md`.
 
