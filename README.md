@@ -19,11 +19,11 @@ Full per-person task breakdown: see `docs/pod_assignments.md`.
 
 ```
 hospital-optimizer/
-├── pod1_queues_priority/         # Pod 1's code
-├── pod2_trees_lookup/            # Pod 2's code
-├── pod3_data_database/           # Pod 3's code (data, DB, pipeline)
-├── pod4_hashing_grouping_maps/   # Pod 4's code
-├── pod5_lists_search_sort/       # Pod 5's code
+├── pod1_data_database/         # Pod 1's code
+├── pod2_lists_search_sort/            # Pod 2's code
+├── pod3_queues_priority/           # Pod 3's code (data, DB, pipeline)
+├── pod4_trees_lookup/   # Pod 4's code
+├── pod5_hashing_grouping_maps/       # Pod 5's code
 ├── shared/                       # Common data models / interfaces everyone imports
 ├── tests/                        # All test files (40+ required across the project)
 ├── docs/                         # Interfaces doc, pod assignments, report drafts, diagrams
