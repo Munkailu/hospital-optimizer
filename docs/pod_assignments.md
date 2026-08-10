@@ -5,7 +5,7 @@ Mapped from the project roadmap onto our actual pod structure.
 
 ---
 
-## Pod 1 — Queues, Priority & Smart Assignment
+## Pod 1 — Data, Database & Delivery
 **Members:** Ninson Abigail (L300), Akuffo Samuel (L200), Dogbe Nicole Eyram (L200)
 
 | Person | Main thing they build & explain | Second thing |
@@ -16,7 +16,7 @@ Mapped from the project roadmap onto our actual pod structure.
 
 > Note: whoever takes the extra greedy algorithm should coordinate closely with Pod 2 (Planning Ahead / DP) since both methods get compared in the report.
 
-## Pod 2 — Trees, Fast Lookup & Planning Ahead
+## Pod 2 — Lists & Search/Sort
 **Members:** Lucius Jackson (L300), Bartah Mohammed Arimeyaw (L200), Atta-Penkrah Nana Abena Boah (L200)
 
 | Person | Main thing they build & explain | Second thing |
@@ -25,7 +25,7 @@ Mapped from the project roadmap onto our actual pod structure.
 | Bartah Mohammed Arimeyaw | Basic search tree | Search tool built on the basic search tree |
 | Atta-Penkrah Nana Abena Boah | Self-balancing search tree (harder version) | Comparing basic tree vs self-balancing tree |
 
-## Pod 3 — Data, Database & Delivery
+## Pod 3 — Queues, Priority & Smart Assignment
 **Members:** Munkailu Yakubu (L300), Okyere Oscar Oroe (L200), Lamptey Glykeria Odarkor (L200)
 
 | Person | Main thing they build & explain | Second thing |
@@ -36,7 +36,7 @@ Mapped from the project roadmap onto our actual pod structure.
 
 > This pod also owns testing, speed-checking, and the report skeleton later in the week.
 
-## Pod 4 — Hashing, Grouping & Maps
+## Pod 4 — Trees, Fast Lookup & Planning Ahead
 **Members:** Irene Adu (L300), Ayeh-Kumi Ferdinand Koram (L200), Awortwe Benedict Kofi (L200)
 
 | Person | Main thing they build & explain | Second thing |
@@ -45,7 +45,7 @@ Mapped from the project roadmap onto our actual pod structure.
 | Ayeh-Kumi Ferdinand Koram | Hash table (fast lookup) and how it handles clashes | A set/lookup tool built using the hash table |
 | Awortwe Benedict Kofi | "Who's connected to whom" grouping tool | Kruskal's method for building a cheap connected network |
 
-## Pod 5 — Lists & Search/Sort
+## Pod 5 — Hashing, Grouping & Maps
 **Members:** Yeboah Owusu Blessings (L300), Alidu Radiyatu (L300), Ibrahim Hidayat (L200)
 
 | Person | Main thing they build & explain | Second thing |
