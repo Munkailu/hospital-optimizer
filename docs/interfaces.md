@@ -20,7 +20,7 @@ Update this file in the **same PR** as the code change it describes.
 
 ---
 
-## Pod 3 (Data, Database & Delivery) — Core Data Shapes
+## Pod 3 Queues, Priority & Smart Assignment) — Core Data Shapes
 
 ### `Request` object
 - **Owned by:** Pod 3
@@ -42,7 +42,7 @@ Update this file in the **same PR** as the code change it describes.
 
 ---
 
-## Pod 1 (Queues, Priority & Smart Assignment)
+## Pod 1 ((Data, Database & Delivery)
 
 ### `PriorityQueue`
 - **Owned by:** Pod 1
@@ -55,18 +55,18 @@ Update this file in the **same PR** as the code change it describes.
 
 ---
 
-## Pod 2 (Trees, Fast Lookup & Planning Ahead)
+## Pod 2 (Lists & Search/Sort)
 
 *(Add basic tree, self-balancing tree, and multi-branch tree interfaces here.)*
 
 ---
 
-## Pod 4 (Hashing, Grouping & Maps)
+## Pod 4 (Trees, Fast Lookup & Planning Ahead)
 
 *(Add hash table, grouping/union-find, and map storage interfaces here.)*
 
 ---
 
-## Pod 5 (Lists & Search/Sort)
+## Pod 5 (Hashing, Grouping & Maps)
 
 *(Add growable list, linked list, search, and sort interfaces here.)*
