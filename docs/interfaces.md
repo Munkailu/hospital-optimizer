@@ -1,72 +1,53 @@
-# Who-Needs-What: Shared Interfaces
+# docs/interfaces.md
 
-Before you start building something another pod will use, write it here in plain words:
-what it does, what information it needs (inputs), and what it gives back (outputs).
-If another pod needs your tool later, they read this instead of guessing.
+## Hospital Smart Service Operations Optimizer — Data Schema (LOCKED, Day 1)
 
-Update this file in the **same PR** as the code change it describes.
+Published by: Pod 1 — Data, Database & Delivery (Ninson Abigail, Akuffo Samuel, Dogbe Nicole Eyram)
+Status: **LOCKED** — do not change field names without notifying Pod 1 first.
 
----
+### Request
 
-## Template (copy this block for each new tool/interface)
+Request {
+id: integer
+type: string
+urgency_level: integer // 1 = low, 5 = critical
+submitted_time: string
+origin_location_id: integer
+destination_location_id: integer
+status: string
+}
 
-### `tool_or_function_name`
-- **Owned by:** Pod N — Name
-- **What it does:** (one or two plain-English sentences)
-- **Input:** (what you pass in, and its shape/type)
-- **Output:** (what you get back, and its shape/type)
-- **Edge cases handled:** (empty input, invalid input, etc.)
-- **Used by:** (which pods/tools depend on this)
 
----
+### Location
 
-## Pod 3 Queues, Priority & Smart Assignment) — Core Data Shapes
+Location {
+id: integer
+name: string
+type: string
+}
 
-### `Request` object
-- **Owned by:** Pod 3
-- **What it does:** Represents one service request (patient transfer, pharmacy run, equipment delivery)
-- **Fields:** `id`, `type`, `urgency_level`, `submitted_time`, `origin_location`, `destination_location`, `status`
-- **Used by:** Pod 1 (queues/priority), Pod 2 (search/sort), Pod 4 (hashing/maps)
 
-### `Location` object
-- **Owned by:** Pod 3
-- **Fields:** `id`, `name`, `type` (ward/pharmacy/etc.), `coordinates_or_zone`
-- **Used by:** Pod 4 (maps/routes)
+### Road
 
-### `Resource` object
-- **Owned by:** Pod 3
-- **Fields:** `id`, `type` (ambulance/porter/nurse), `availability_status`, `current_location`
-- **Used by:** Pod 1 (assignment), Pod 4 (routing)
+Road {
+id: integer
+from_location_id: integer
+to_location_id: integer
+distance: number
+}
 
-*(Pod 3: replace/expand these once your real schema is finalized on Day 1–2.)*
 
----
+### Resource
 
-## Pod 1 ((Data, Database & Delivery)
+Resource {
+id: integer
+type: string
+availability_status: string
+current_location_id: integer
+}
 
-### `PriorityQueue`
-- **Owned by:** Pod 1
-- **What it does:** Add a request; always remove the most urgent one first
-- **Input:** `Request` objects
-- **Output:** next `Request` to handle
-- **Used by:** Pod 4 (route-finding / network-building needs a priority tool)
 
-*(Add your queue, wraparound queue, and deque interfaces here as you build them.)*
+### Notes
 
----
-
-## Pod 2 (Lists & Search/Sort)
-
-*(Add basic tree, self-balancing tree, and multi-branch tree interfaces here.)*
-
----
-
-## Pod 4 (Trees, Fast Lookup & Planning Ahead)
-
-*(Add hash table, grouping/union-find, and map storage interfaces here.)*
-
----
-
-## Pod 5 (Hashing, Grouping & Maps)
-
-*(Add growable list, linked list, search, and sort interfaces here.)*
+- Foreign keys: `Request.origin_location_id`, `Request.destination_location_id`, `Road.from_location_id`, `Road.to_location_id`, and `Resource.current_location_id` all reference `Location.id`.
+- Output files: `locations.csv`, `roads.csv`, `requests.csv`, `resources.csv`, plus `hospital.db`.
