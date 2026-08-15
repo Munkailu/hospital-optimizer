@@ -1,0 +1,31 @@
+id,type,resource_name,availability_status,current_location_id
+1,Ambulance,Ambulance 1,Available,45
+2,Nurse,Nurse 2,Available,47
+3,Porter,Porter 3,Available,36
+4,Wheelchair,Wheelchair 4,Busy,43
+5,Medical Cart,Medical Cart 5,Available,46
+6,Ambulance,Ambulance 6,Available,32
+7,Nurse,Nurse 7,Available,10
+8,Porter,Porter 8,Busy,13
+9,Wheelchair,Wheelchair 9,Available,19
+10,Medical Cart,Medical Cart 10,Available,14
+11,Ambulance,Ambulance 11,Available,4
+12,Nurse,Nurse 12,Busy,38
+13,Porter,Porter 13,Available,48
+14,Wheelchair,Wheelchair 14,Available,35
+15,Medical Cart,Medical Cart 15,Available,4
+16,Ambulance,Ambulance 16,Busy,48
+17,Nurse,Nurse 17,Available,21
+18,Porter,Porter 18,Available,4
+19,Wheelchair,Wheelchair 19,Available,4
+20,Medical Cart,Medical Cart 20,Busy,38
+21,Ambulance,Ambulance 21,Available,31
+22,Nurse,Nurse 22,Available,33
+23,Porter,Porter 23,Available,34
+24,Wheelchair,Wheelchair 24,Busy,11
+25,Medical Cart,Medical Cart 25,Available,4
+26,Ambulance,Ambulance 26,Available,33
+27,Nurse,Nurse 27,Available,6
+28,Porter,Porter 28,Busy,12
+29,Wheelchair,Wheelchair 29,Available,5
+30,Medical Cart,Medical Cart 30,Available,39
