@@ -1,51 +1,51 @@
-id,name,type,floor
-1,Main Entrance,Entrance,0
-2,Emergency Ward,Ward,0
-3,Outpatient Department (OPD),Department,0
-4,Pharmacy,Pharmacy,0
-5,Laboratory,Laboratory,0
-6,Radiology,Department,1
-7,ICU,Ward,1
-8,High Dependency Unit,Ward,1
-9,Operating Theatre A,Theatre,1
-10,Operating Theatre B,Theatre,1
-11,Maternity Ward,Ward,2
-12,Antenatal Clinic,Clinic,2
-13,Labour Ward,Ward,2
-14,Paediatric Ward,Ward,2
-15,Children's Clinic,Clinic,2
-16,Male Medical Ward,Ward,3
-17,Female Medical Ward,Ward,3
-18,Male Surgical Ward,Ward,3
-19,Female Surgical Ward,Ward,3
-20,Orthopaedic Ward,Ward,3
-21,Dental Clinic,Clinic,1
-22,Eye Clinic,Clinic,1
-23,ENT Clinic,Clinic,1
-24,Physiotherapy,Department,1
-25,Dialysis Unit,Department,2
-26,Blood Bank,Laboratory,1
-27,Medical Records,Administration,0
-28,Accounts Office,Administration,0
-29,Administration Block,Administration,0
-30,Security Post,Security,0
-31,Kitchen,Support,0
-32,Laundry,Support,0
-33,Mortuary,Support,0
-34,Ambulance Bay,Transport,0
-35,Biomedical Engineering,Workshop,1
-36,Central Stores,Store,0
-37,Staff Lounge,Support,1
-38,Conference Room,Administration,1
-39,IT Department,Administration,1
-40,Power House,Utility,0
-41,Oxygen Plant,Utility,0
-42,Waste Disposal Unit,Utility,0
-43,Reception,Administration,0
-44,Waiting Area A,Support,0
-45,Waiting Area B,Support,1
-46,Isolation Ward,Ward,2
-47,COVID-19 Unit,Ward,2
-48,Cardiology Clinic,Clinic,2
-49,Neurology Clinic,Clinic,2
-50,Exit Gate,Exit,0
+id,name,type
+1,Main Entrance,Entrance
+2,Emergency Ward,Ward
+3,Outpatient Department (OPD),Department
+4,Pharmacy,Pharmacy
+5,Laboratory,Laboratory
+6,Radiology,Department
+7,ICU,Ward
+8,High Dependency Unit,Ward
+9,Operating Theatre A,Theatre
+10,Operating Theatre B,Theatre
+11,Maternity Ward,Ward
+12,Antenatal Clinic,Clinic
+13,Labour Ward,Ward
+14,Paediatric Ward,Ward
+15,Children's Clinic,Clinic
+16,Male Medical Ward,Ward
+17,Female Medical Ward,Ward
+18,Male Surgical Ward,Ward
+19,Female Surgical Ward,Ward
+20,Orthopaedic Ward,Ward
+21,Dental Clinic,Clinic
+22,Eye Clinic,Clinic
+23,ENT Clinic,Clinic
+24,Physiotherapy,Department
+25,Dialysis Unit,Department
+26,Blood Bank,Laboratory
+27,Medical Records,Administration
+28,Accounts Office,Administration
+29,Administration Block,Administration
+30,Security Post,Security
+31,Kitchen,Support
+32,Laundry,Support
+33,Mortuary,Support
+34,Ambulance Bay,Transport
+35,Biomedical Engineering,Workshop
+36,Central Stores,Store
+37,Staff Lounge,Support
+38,Conference Room,Administration
+39,IT Department,Administration
+40,Power House,Utility
+41,Oxygen Plant,Utility
+42,Waste Disposal Unit,Utility
+43,Reception,Administration
+44,Waiting Area A,Support
+45,Waiting Area B,Support
+46,Isolation Ward,Ward
+47,COVID-19 Unit,Ward
+48,Cardiology Clinic,Clinic
+49,Neurology Clinic,Clinic
+50,Exit Gate,Exit

@@ -36,10 +36,10 @@ public class CSVLoader {
 
             Statement stmt = conn.createStatement();
 
+            // Child/dependent tables first
             stmt.executeUpdate("DELETE FROM Requests");
             stmt.executeUpdate("DELETE FROM Resources");
             stmt.executeUpdate("DELETE FROM Roads");
-            stmt.executeUpdate("DELETE FROM Patients");
             stmt.executeUpdate("DELETE FROM Locations");
 
             stmt.close();
@@ -53,22 +53,30 @@ public class CSVLoader {
 
             System.out.println("Validating CSV files...");
 
-            if (!Validator.validateLocations(DATA_FOLDER + "locations.csv")) {
+            if (!Validator.validateLocations(
+                    DATA_FOLDER + "locations.csv")) {
+
                 System.out.println("❌ Locations validation failed.");
                 return;
             }
 
-            if (!Validator.validateRoads(DATA_FOLDER + "roads.csv")) {
+            if (!Validator.validateRoads(
+                    DATA_FOLDER + "roads.csv")) {
+
                 System.out.println("❌ Roads validation failed.");
                 return;
             }
 
-            if (!Validator.validateResources(DATA_FOLDER + "resources.csv")) {
+            if (!Validator.validateResources(
+                    DATA_FOLDER + "resources.csv")) {
+
                 System.out.println("❌ Resources validation failed.");
                 return;
             }
 
-            if (!Validator.validateRequests(DATA_FOLDER + "requests.csv")) {
+            if (!Validator.validateRequests(
+                    DATA_FOLDER + "requests.csv")) {
+
                 System.out.println("❌ Requests validation failed.");
                 return;
             }
@@ -84,6 +92,10 @@ public class CSVLoader {
             loadRoads(conn);
             loadResources(conn);
             loadRequests(conn);
+
+            // ============================================
+            // Completion summary
+            // ============================================
 
             System.out.println();
             System.out.println("============================================");
@@ -115,162 +127,258 @@ public class CSVLoader {
     // Load Locations
     // ======================================================
 
-    private static void loadLocations(Connection conn) throws Exception {
+    private static void loadLocations(Connection conn)
+            throws Exception {
 
-        BufferedReader br =
-                new BufferedReader(new FileReader(DATA_FOLDER + "locations.csv"));
+        try (
+            BufferedReader br = new BufferedReader(
+                new FileReader(
+                    DATA_FOLDER + "locations.csv"
+                )
+            );
 
-        br.readLine();
+            PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO Locations " +
+                "(id, name, type) " +
+                "VALUES (?, ?, ?)"
+            )
+        ) {
 
-        String line;
+            // Skip CSV header
+            br.readLine();
 
-        String sql =
-                "INSERT INTO Locations(id,name,type,floor) VALUES(?,?,?,?)";
+            String line;
+            int count = 0;
 
-        PreparedStatement ps = conn.prepareStatement(sql);
+            while ((line = br.readLine()) != null) {
 
-        int count = 0;
+                String[] d = line.split(",");
 
-        while ((line = br.readLine()) != null) {
+                ps.setInt(
+                    1,
+                    Integer.parseInt(d[0])
+                );
 
-            String[] d = line.split(",");
+                ps.setString(
+                    2,
+                    d[1]
+                );
 
-            ps.setInt(1, Integer.parseInt(d[0]));
-            ps.setString(2, d[1]);
-            ps.setString(3, d[2]);
-            ps.setInt(4, Integer.parseInt(d[3]));
+                ps.setString(
+                    3,
+                    d[2]
+                );
 
-            ps.executeUpdate();
-            count++;
+                ps.executeUpdate();
+
+                count++;
+            }
+
+            System.out.println(
+                "✓ Loaded " + count + " Locations"
+            );
         }
-
-        br.close();
-        ps.close();
-
-        System.out.println("✓ Loaded " + count + " Locations");
     }
 
     // ======================================================
     // Load Roads
     // ======================================================
 
-    private static void loadRoads(Connection conn) throws Exception {
+    private static void loadRoads(Connection conn)
+            throws Exception {
 
-        BufferedReader br =
-                new BufferedReader(new FileReader(DATA_FOLDER + "roads.csv"));
+        try (
+            BufferedReader br = new BufferedReader(
+                new FileReader(
+                    DATA_FOLDER + "roads.csv"
+                )
+            );
 
-        br.readLine();
+            PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO Roads " +
+                "(id, from_location_id, to_location_id, distance) " +
+                "VALUES (?, ?, ?, ?)"
+            )
+        ) {
 
-        String line;
+            // Skip CSV header
+            br.readLine();
 
-        String sql =
-                "INSERT INTO Roads(id,from_location_id,to_location_id,distance,estimated_time) VALUES(?,?,?,?,?)";
+            String line;
+            int count = 0;
 
-        PreparedStatement ps = conn.prepareStatement(sql);
+            while ((line = br.readLine()) != null) {
 
-        int count = 0;
+                String[] d = line.split(",");
 
-        while ((line = br.readLine()) != null) {
+                ps.setInt(
+                    1,
+                    Integer.parseInt(d[0])
+                );
 
-            String[] d = line.split(",");
+                ps.setInt(
+                    2,
+                    Integer.parseInt(d[1])
+                );
 
-            ps.setInt(1, Integer.parseInt(d[0]));
-            ps.setInt(2, Integer.parseInt(d[1]));
-            ps.setInt(3, Integer.parseInt(d[2]));
-            ps.setDouble(4, Double.parseDouble(d[3]));
-            ps.setInt(5, Integer.parseInt(d[4]));
+                ps.setInt(
+                    3,
+                    Integer.parseInt(d[2])
+                );
 
-            ps.executeUpdate();
-            count++;
+                ps.setDouble(
+                    4,
+                    Double.parseDouble(d[3])
+                );
+
+                ps.executeUpdate();
+
+                count++;
+            }
+
+            System.out.println(
+                "✓ Loaded " + count + " Roads"
+            );
         }
-
-        br.close();
-        ps.close();
-
-        System.out.println("✓ Loaded " + count + " Roads");
     }
 
     // ======================================================
     // Load Resources
     // ======================================================
 
-    private static void loadResources(Connection conn) throws Exception {
+    private static void loadResources(Connection conn)
+            throws Exception {
 
-        BufferedReader br =
-                new BufferedReader(new FileReader(DATA_FOLDER + "resources.csv"));
+        try (
+            BufferedReader br = new BufferedReader(
+                new FileReader(
+                    DATA_FOLDER + "resources.csv"
+                )
+            );
 
-        br.readLine();
+            PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO Resources " +
+                "(id, type, availability_status, current_location_id) " +
+                "VALUES (?, ?, ?, ?)"
+            )
+        ) {
 
-        String line;
+            // Skip CSV header
+            br.readLine();
 
-        String sql =
-                "INSERT INTO Resources(id,type,resource_name,availability_status,current_location_id) VALUES(?,?,?,?,?)";
+            String line;
+            int count = 0;
 
-        PreparedStatement ps = conn.prepareStatement(sql);
+            while ((line = br.readLine()) != null) {
 
-        int count = 0;
+                String[] d = line.split(",");
 
-        while ((line = br.readLine()) != null) {
+                ps.setInt(
+                    1,
+                    Integer.parseInt(d[0])
+                );
 
-            String[] d = line.split(",");
+                ps.setString(
+                    2,
+                    d[1]
+                );
 
-            ps.setInt(1, Integer.parseInt(d[0]));
-            ps.setString(2, d[1]);
-            ps.setString(3, d[2]);
-            ps.setString(4, d[3]);
-            ps.setInt(5, Integer.parseInt(d[4]));
+                ps.setString(
+                    3,
+                    d[2]
+                );
 
-            ps.executeUpdate();
-            count++;
+                ps.setInt(
+                    4,
+                    Integer.parseInt(d[3])
+                );
+
+                ps.executeUpdate();
+
+                count++;
+            }
+
+            System.out.println(
+                "✓ Loaded " + count + " Resources"
+            );
         }
-
-        br.close();
-        ps.close();
-
-        System.out.println("✓ Loaded " + count + " Resources");
     }
 
     // ======================================================
     // Load Requests
     // ======================================================
 
-    private static void loadRequests(Connection conn) throws Exception {
+    private static void loadRequests(Connection conn)
+            throws Exception {
 
-        BufferedReader br =
-                new BufferedReader(new FileReader(DATA_FOLDER + "requests.csv"));
+        try (
+            BufferedReader br = new BufferedReader(
+                new FileReader(
+                    DATA_FOLDER + "requests.csv"
+                )
+            );
 
-        br.readLine();
+            PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO Requests " +
+                "(id, type, urgency_level, submitted_time, " +
+                "origin_location_id, destination_location_id, status) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?)"
+            )
+        ) {
 
-        String line;
+            // Skip CSV header
+            br.readLine();
 
-        String sql =
-                "INSERT INTO Requests(id,patient_id,resource_id,origin_location_id,destination_location_id,type,urgency_level,status,submitted_time) VALUES(?,?,?,?,?,?,?,?,?)";
+            String line;
+            int count = 0;
 
-        PreparedStatement ps = conn.prepareStatement(sql);
+            while ((line = br.readLine()) != null) {
 
-        int count = 0;
+                String[] d = line.split(",");
 
-        while ((line = br.readLine()) != null) {
+                ps.setInt(
+                    1,
+                    Integer.parseInt(d[0])
+                );
 
-            String[] d = line.split(",");
+                ps.setString(
+                    2,
+                    d[1]
+                );
 
-            ps.setInt(1, Integer.parseInt(d[0]));
-            ps.setInt(2, Integer.parseInt(d[1]));
-            ps.setInt(3, Integer.parseInt(d[2]));
-            ps.setInt(4, Integer.parseInt(d[3]));
-            ps.setInt(5, Integer.parseInt(d[4]));
-            ps.setString(6, d[5]);
-            ps.setInt(7, Integer.parseInt(d[6]));
-            ps.setString(8, d[7]);
-            ps.setString(9, d[8]);
+                ps.setInt(
+                    3,
+                    Integer.parseInt(d[2])
+                );
 
-            ps.executeUpdate();
-            count++;
+                ps.setString(
+                    4,
+                    d[3]
+                );
+
+                ps.setInt(
+                    5,
+                    Integer.parseInt(d[4])
+                );
+
+                ps.setInt(
+                    6,
+                    Integer.parseInt(d[5])
+                );
+
+                ps.setString(
+                    7,
+                    d[6]
+                );
+
+                ps.executeUpdate();
+
+                count++;
+            }
+
+            System.out.println(
+                "✓ Loaded " + count + " Requests"
+            );
         }
-
-        br.close();
-        ps.close();
-
-        System.out.println("✓ Loaded " + count + " Requests");
     }
 }
