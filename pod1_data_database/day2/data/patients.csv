@@ -1,0 +1,111 @@
+id,first_name,last_name,age,gender,location_id,condition
+1,Kwame,Amoah,32,Male,15,Diabetes
+2,Frank,Asante,76,Male,28,Malaria
+3,Yaw,Appiah,30,Male,33,Minor Injury
+4,Frank,Appiah,84,Male,45,Typhoid Fever
+5,Afia,Sarpong,76,Female,18,Asthma
+6,Kojo,Ofori,44,Male,18,Diabetes
+7,Daniel,Boateng,12,Male,25,Hypertension
+8,Gifty,Danso,34,Female,3,Cardiac Monitoring
+9,Sandra,Boateng,49,Female,6,Typhoid Fever
+11,Elizabeth,Gyasi,74,Female,13,Cardiac Monitoring
+13,Kofi,Adjei,38,Male,6,Wound Care
+14,Kwabena,Nkrumah,36,Male,30,Dehydration
+15,Adjoa,Gyasi,46,Female,14,Dehydration
+16,Abena,Danso,82,Female,11,Typhoid Fever
+17,Kojo,Sarpong,49,Male,18,Observation
+18,Daniel,Owusu,30,Male,3,Asthma
+19,Vivian,Amoah,9,Female,14,Observation
+20,Akua,Yeboah,51,Female,42,Routine Checkup
+21,Emmanuel,Osei,32,Male,48,Typhoid Fever
+24,Linda,Ofori,75,Female,26,Respiratory Infection
+25,Kwesi,Acheampong,64,Male,6,Asthma
+26,Kwabena,Osei,81,Male,11,Asthma
+27,Elizabeth,Asante,50,Female,25,Minor Injury
+28,Rebecca,Amoah,71,Female,1,Dehydration
+29,Frank,Amoah,83,Male,22,Hypertension
+30,Patricia,Agyeman,59,Female,1,Cardiac Monitoring
+31,Rebecca,Agyeman,65,Female,7,Wound Care
+32,Rebecca,Danso,26,Female,10,Respiratory Infection
+33,Frank,Acheampong,1,Male,39,Respiratory Infection
+34,Ama,Boateng,47,Female,20,Fracture
+35,Ebo,Bediako,11,Male,6,Cardiac Monitoring
+36,Abena,Antwi,17,Female,9,Dehydration
+37,Sandra,Agyeman,34,Female,34,Wound Care
+38,Akua,Antwi,89,Female,13,Cardiac Monitoring
+39,Vivian,Gyasi,57,Female,34,Routine Checkup
+40,Ebo,Adjei,9,Male,22,Malaria
+41,George,Adjei,1,Male,5,Cardiac Monitoring
+42,Ebo,Asante,5,Male,22,Hypertension
+43,Emmanuel,Yeboah,28,Male,35,Diabetes
+44,Afia,Yeboah,53,Female,13,Hypertension
+46,Nana,Gyasi,55,Male,27,Routine Checkup
+47,Kwabena,Owusu,52,Male,47,Respiratory Infection
+48,Ebo,Appiah,25,Male,35,Routine Checkup
+49,Nana,Agyeman,36,Male,30,Fracture
+50,Prince,Antwi,13,Male,4,Dehydration
+51,Yaw,Adjei,22,Male,27,Routine Checkup
+52,Akua,Nkrumah,8,Female,11,Post-Surgery Recovery
+53,Isaac,Amoah,59,Male,19,Post-Surgery Recovery
+54,Yaa,Appiah,38,Female,14,Malaria
+55,Daniel,Owusu,7,Male,38,Routine Checkup
+56,Kofi,Acheampong,11,Male,12,Hypertension
+57,Ebo,Nkrumah,16,Male,37,Fracture
+58,Joseph,Asante,54,Male,43,Minor Injury
+59,Grace,Appiah,86,Female,46,Respiratory Infection
+61,Emmanuel,Nkrumah,17,Male,43,Dehydration
+62,Cecilia,Frimpong,10,Female,1,Routine Checkup
+63,Yaw,Antwi,28,Male,33,Maternity Care
+64,Michael,Asante,32,Male,24,Maternity Care
+65,Prince,Antwi,39,Male,40,Asthma
+66,Frank,Darko,85,Male,7,Observation
+67,Emmanuel,Boateng,14,Male,48,Typhoid Fever
+68,Emmanuel,Darko,78,Male,14,Cardiac Monitoring
+69,Akua,Amoah,65,Female,32,Maternity Care
+70,Yaw,Ofori,36,Male,3,Malaria
+71,Yaa,Amoah,21,Female,48,Routine Checkup
+72,Sandra,Mensah,15,Female,5,Observation
+73,Frank,Owusu,48,Male,38,Typhoid Fever
+74,Nana,Osei,6,Male,20,Respiratory Infection
+75,Michael,Appiah,88,Male,16,Dehydration
+76,Michael,Antwi,53,Male,40,Cardiac Monitoring
+77,Ebo,Agyeman,23,Male,27,Malaria
+78,Daniel,Ofori,86,Male,48,Asthma
+79,Emmanuel,Agyeman,14,Male,25,Wound Care
+80,Solomon,Adjei,26,Male,30,Respiratory Infection
+83,Afia,Adjei,4,Female,43,Fracture
+84,Mercy,Amoah,9,Female,50,Maternity Care
+85,Rebecca,Nkrumah,87,Female,35,Respiratory Infection
+86,Kwabena,Amoah,23,Male,38,Maternity Care
+87,Kwabena,Danso,56,Male,23,Cardiac Monitoring
+88,Patricia,Danso,66,Female,8,Post-Surgery Recovery
+89,Emmanuel,Owusu,56,Male,1,Typhoid Fever
+90,Michael,Ofori,9,Male,43,Observation
+92,Elizabeth,Frimpong,85,Female,8,Cardiac Monitoring
+93,Rebecca,Darko,86,Female,27,Respiratory Infection
+94,Comfort,Antwi,17,Female,13,Post-Surgery Recovery
+95,Adjoa,Danso,73,Female,20,Post-Surgery Recovery
+96,Samuel,Darko,27,Male,28,Asthma
+97,Cecilia,Sarpong,57,Female,44,Fracture
+99,Adjoa,Asante,37,Female,33,Dehydration
+100,Abena,Adjei,87,Female,20,Fracture
+101,Kwesi,Mensah,6,Male,16,Routine Checkup
+102,Prince,Ofori,81,Male,37,Fracture
+103,Josephine,Nkrumah,32,Female,10,Dehydration
+104,Kwabena,Ofori,29,Male,12,Asthma
+105,Akosua,Antwi,32,Female,8,Routine Checkup
+106,Prince,Acheampong,72,Male,39,Respiratory Infection
+107,Elizabeth,Acheampong,55,Female,36,Routine Checkup
+108,Solomon,Sarpong,34,Male,49,Fracture
+109,Rebecca,Yeboah,81,Female,16,Maternity Care
+110,Abena,Darko,31,Female,18,Respiratory Infection
+111,Sandra,Asante,18,Female,10,Fracture
+112,Yaa,Appiah,9,Female,27,Post-Surgery Recovery
+113,Sandra,Sarpong,54,Female,4,Fracture
+114,Vivian,Bediako,3,Female,49,Minor Injury
+115,Josephine,Mensah,46,Female,20,Asthma
+116,Patricia,Antwi,70,Female,39,Observation
+117,Solomon,Adjei,35,Male,28,Routine Checkup
+118,Isaac,Frimpong,86,Male,44,Asthma
+119,Adjoa,Sarpong,17,Female,40,Typhoid Fever
+120,Isaac,Bediako,73,Male,43,Malaria
