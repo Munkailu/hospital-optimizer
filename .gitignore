@@ -25,7 +25,7 @@ npm-debug.log
 
 # Database files (don't commit local test DBs)
 *.sqlite3
-*.db
+# *.db
 *.db-journal
 
 # Build output
