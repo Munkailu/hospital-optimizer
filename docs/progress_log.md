@@ -11,7 +11,7 @@ Format: `- **Name (Pod N):** what now works, in two sentences.`
 -
 
 ## Day 3
--
+   - **Ibrahim Hidayat (Pod 5):** Built hash table with chaining-based collision handling, tested with normal/collision/bad-input/remove cases. Built LocationLookup on top using Pod 1's real Location class. Opened PR #20 for review.
 
 ## Day 4
 -
