@@ -17,7 +17,7 @@ dataset, validates the data, and publishes the two log tables.
 
 ## Build, Test, Run
 
-Java 17 + Maven required.
+Java 25 + Maven required.
 
 ```bash
 # from the repo root
